@@ -1,0 +1,17 @@
+/* line 1, C:/Users/Zahra Nawazish/Desktop/Tic Tac Toe/styles.scss */
+main {
+  width: 100%;
+  height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  /* line 7, C:/Users/Zahra Nawazish/Desktop/Tic Tac Toe/styles.scss */
+  main table {
+    border-spacing: 0; }
+    /* line 9, C:/Users/Zahra Nawazish/Desktop/Tic Tac Toe/styles.scss */
+    main table td {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black; }
+
+/*# sourceMappingURL=styles.css.map */
