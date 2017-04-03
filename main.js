@@ -6,7 +6,7 @@ let p1 = "X";
 let p2 = "O";
 let board = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 let turnsPlayed = 0;
-let currentPlayer = p2;
+let currentPlayer = p1;
 let multiplayer = false;
 let fc = 0;
 
@@ -126,7 +126,7 @@ fc++;
     newBoard[spot] = player;
 
     //if collect the score resulted from calling minimax on the opponent of the current player
-    if (player == p2){
+    if (player === p2){
       result = minimax(newBoard, p1);
       move.score = result.score;
     }
@@ -135,7 +135,7 @@ fc++;
       move.score = result.score;
     }
 
-    //reset the spot to empty
+    //reset the spot to empty4
     newBoard[spot] = move.index;
 
     // push the object to the array
@@ -146,20 +146,20 @@ fc++;
 // if it is the computer's turn loop over the moves and choose the move with the highest score
   let bestMove;
   if(player === p2){
-    let bestScore = -10000;
+    let bestScore = -10;
     moves.forEach((move, i)=>{
         if(move.score > bestScore){
-        bestScore = moves.score;
+        bestScore = move.score;
         bestMove = i;
       }
     });
   }else{
 
 // else loop over the moves and choose the move with the lowest score
-    var bestScore = 10000;
+    var bestScore = 10;
       moves.forEach((move, i)=>{
         if(move.score < bestScore){
-        bestScore = moves.score;
+        bestScore = move.score;
         bestMove = i;
       }
     });
