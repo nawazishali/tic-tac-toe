@@ -14,12 +14,14 @@ let fc = 0;
 function $(elem) {
     if (elem.substr(0, 1) === "#") {
         return document.getElementById(elem.substr(1, (elem.length - 1)));
+    } else if (elem.substr(0, 1) === ".") {
+        return document.getElementsByClassName(elem.substr(1, (elem.length - 1)));
     } else {
         return document.getElementsByTagName(elem);
     }
 }
 
-console.log($("td"));
+console.log($(".cell"));
 
 
 function winning(board, player) {
@@ -55,7 +57,7 @@ function getEmptySpots(board){
 }
 
 function playerTurn() {
-    let cells = $("td");
+    let cells = $(".cell");
     //Array.from converts HTMLcollection or Array like objects to actual Arrays.
     Array.from(cells).forEach((cell) => cell.onclick = () => {
         cell.innerHTML = p1;
@@ -68,7 +70,7 @@ function playerTurn() {
 }
 
 function player2Turn() {
-    let cells = $("td");
+    let cells = $(".cell");
     //Array.from converts HTMLcollection or Array like objects to actual Arrays.
     Array.from(cells).forEach((cell) => cell.onclick = () => {
         cell.innerHTML = p2;
@@ -84,7 +86,7 @@ function player2Turn() {
 function aiTurn() {
     let bestSpot = minimax(board, p2);
     console.log(fc);
-    let cells = $("td");
+    let cells = $(".cell");
     cells[bestSpot.index].innerHTML = p2;
     board[bestSpot.index] = p2;
     turnsPlayed++;
@@ -156,7 +158,7 @@ fc++;
   }else{
 
 // else loop over the moves and choose the move with the lowest score
-    var bestScore = 10;
+    let bestScore = 10;
       moves.forEach((move, i)=>{
         if(move.score < bestScore){
         bestScore = move.score;
@@ -168,11 +170,6 @@ fc++;
 // return the chosen move (object) from the array to the higher depth
   return moves[bestMove];
 }
-
-
-
-
-
 
 
 

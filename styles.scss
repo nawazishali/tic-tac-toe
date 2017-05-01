@@ -4,18 +4,50 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    table {
-        border-spacing: 0;
-        td {
-            width: 100px;
-            height: 100px;
-            max-width: 100px;
-            max-height: 100px;
-            border: 1px solid black;
+    #board {
+        width:320px;
+        height: 320px;
+        display: flex;
+        flex-wrap: wrap;
+        /*justify-content: space-between;*/
+        .cell {
+            width: 98px;
+            height: 98px;
+            border: 1px solid grey;
+            border-radius: 5px;
+            margin: auto;
             padding: 0;
             text-align: center;
             vertical-align: middle;
             font-size: 80px;
+        }
+    }
+    #console {
+        width: 320px;
+        height: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        h4 {
+            width: 320px;
+            text-align: center;
+            margin: auto;
+            font-size: 20px;
+        }
+        button {
+            width:98px;
+            height: 98px;
+            font-size: 60px;
+            margin: auto;
+        }
+        span {
+            width:98px;
+            height: 98px;
+            font-size: 60px;
+            margin: auto;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
         }
     }
 }
