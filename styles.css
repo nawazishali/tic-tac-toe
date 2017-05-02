@@ -35,14 +35,17 @@ main {
       width: 98px;
       height: 98px;
       font-size: 60px;
-      margin: auto; }
-    main #console span {
+      margin: auto;
+      border: 1px solid grey;
+      border-radius: 5px; }
+      main #console button:focus {
+        outline: none; }
+    main #console div {
       width: 98px;
       height: 98px;
+      line-height: 98px;
       font-size: 60px;
       margin: auto;
-      text-align: center;
-      display: table-cell;
-      vertical-align: middle; }
+      text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */

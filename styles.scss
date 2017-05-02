@@ -39,15 +39,19 @@ main {
             height: 98px;
             font-size: 60px;
             margin: auto;
+            border: 1px solid grey;
+            border-radius: 5px;
+            &:focus {
+                outline: none;
+            }
         }
-        span {
+        div {
             width:98px;
             height: 98px;
+            line-height: 98px;
             font-size: 60px;
             margin: auto;
             text-align: center;
-            display: table-cell;
-            vertical-align: middle;
         }
     }
 }
